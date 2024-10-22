@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ game.title }}</title>
+</head>
+<body>
+    <h1>{{ game.title }}</h1>
+    <p>{{ game.description }}</p>
+    <form method="POST" action="{% url 'start_game' game.id %}">
+    {% csrf_token %}
+    <button type="submit">Start Game</button>
+</form>
+<a href="{{ game.game_file.url }}" download>O'yinni yuklab olish va ishga tushirish</a>
+
+</body>
+</html>

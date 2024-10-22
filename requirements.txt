@@ -1,0 +1,6 @@
+ursina
+django
+pillow
+pygame
+panda3d
+pyopengl

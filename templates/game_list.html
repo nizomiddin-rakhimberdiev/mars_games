@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>O'yinlar</title>
+</head>
+<body>
+    <h1>O'yinlar ro'yxati</h1>
+    <ul style="display: flex; justify-content: space-center; gap: 100px    ">
+        {% for game in games %}
+        <li>
+            <img width="150" src="{{ game.image.url }}" alt="{{ game.image.url }}">
+            <h2>{{ game.title }}</h2>
+            <p>{{ game.description }}</p>
+            <a href="{% url 'game_detail' game.id %}">O'yinni o'ynash</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
